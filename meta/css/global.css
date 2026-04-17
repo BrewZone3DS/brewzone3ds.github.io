@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "WiiU";
+    src: url("meta/FOT-RodinNTLG Pro DB.otf") format('opentype');
+}
+
+body {
+    font-family: "WiiU", sans-serif;
+    background-color: #474747;
+    background-image: radial-gradient(circle at 10px 10px, #444444 10px, transparent 0), radial-gradient(circle at 10px 10px, #444444 10px, transparent 0);
+    background-size: 20px 20px;
+    background-position: 0px 0px, 20px 20px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
