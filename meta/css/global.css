@@ -1,25 +1,36 @@
 @font-face {
-    font-family: "WiiU";
-    src: url("meta/FOT-RodinNTLG Pro DB.otf") format('opentype');
+    font-family: "Nintendo";
+    src: url("../font/FOT-RodinNTLG Pro DB.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "NintendoU";
+    src: url("../font/MarvelouzTube Font 3.ttf") format('truetype');
 }
 
 body {
-    font-family: "WiiU", sans-serif;
+    font-family: Nintendo, sans-serif;
     background-color: #ffffff;
     background-image: radial-gradient(circle at 200px 200px, #0eafff 200px, transparent 0), radial-gradient(circle at 200px 200px, #0eafff 200px, transparent 0);
     background-size: 1100px 1100px;
     background-position: 0px 150px, 500px 700px;
-    color: #ffffff;
+    color: #0eafff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 500vh;
+    height: auto;
+    overflow-x: hidden;
 }
 
 p {
     margin: 10px 0;
     text-align: center;
     font-weight: 600;
+    color: #0eafff;
+}
+
+p img {
+    width: 30px;
 }
 
 a {
@@ -48,3 +59,84 @@ a {
         width: 80%;
         margin: 20px 0;
     }
+
+    .content-block h2 {
+        margin: 0;
+        color: #0eafff;
+        font-family: NintendoU, sans-serif;
+    }
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+@media (min-width: 800px) {
+    body {
+        background-color: #ffffff;
+        background-image: radial-gradient(circle at 200px 200px, #0eafff 200px, transparent 0), radial-gradient(circle at 200px 200px, #0eafff 200px, transparent 0);
+        background-size: 1100px 1100px;
+        background-position: 0px 150px, 500px 700px;
+    }
+}
+
+@media (max-width:800px) {
+    body {
+        background-color: #ffffff;
+        background-image: radial-gradient(circle at 100px 100px, #0eafff 100px, transparent 0), radial-gradient(circle at 100px 100px, #0eafff 100px, transparent 0);
+        background-size: 500px 500px;
+        background-position: 0px 150px, 250px 350px;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    position: relative;
+    top: 10px;
+    background-color: #fff;
+    border-top: 2px solid #0eafff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    color: #0eafff;
+}
+
+.mii {
+    width: 30px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.nintendou {
+    font-family: NintendoU, sans-serif;
+}
+
+.btn {
+    background-image: linear-gradient(180deg, #0eafff, #11a7f2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Nintendo, sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
