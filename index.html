@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://brewz.one/" />
 </head>
 <body>
-    <button class="dark-mode-toggle" onclick="toggleDarkMode();img()"><img src="meta/image/moon.png" id="dark-mode-toggle" alt="Dark Mode" /></button>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode();img()"><img src="meta/image/sun.png" id="dark-mode-toggle" alt="Dark Mode" /></button>
     <div class="content-block">
         <header>
             <img src="meta/image/logo.png" alt="BrewZone Logo" class="logo">
@@ -53,18 +53,5 @@
         <p>Assisted by by @nebulagamez <img src="https://mii-unsecure.ariankordi.net/miis/image.png?nnid=someguylol&api_id=1&data=AwAAMCP%2BqxLLDi3ynrEz8ED0B%2FlY8QAAoldaAGEAYwBoAAAAAAAAAAAAAAAAAEw5AAAvBwJpRBjAM0UUZhIVZg4AACkAUkhQWgBhAGMAaAAAAAAAAAAAAAAAAAAAAI2%2F&type=face&width=270" alt="nebulagamez mii" class="mii" /></p>
     </footer>
     <script src="meta/js/darkmode.js"></script>
-    <script>
-        window.onload = function () {
-            let savedTheme = localStorage.getItem("theme");
-
-            if (savedTheme === "dark") {
-                document.body.classList.add("dark-mode");
-                document.getElementById("dark-mode-toggle").src = "meta/image/sun.png";
-            } else if (savedTheme === "light") {
-                document.body.classList.remove("dark-mode");
-                document.getElementById("dark-mode-toggle").src = "meta/image/sun.png";
-            }
-        }
-    </script>
 </body>
 </html>
