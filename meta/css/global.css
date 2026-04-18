@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #0eafff;
+    --secondary-color: #99ddff;
+    --background-color: #ffffff;
+    --text-color: #0eafff;
+}
+
 @font-face {
     font-family: "Nintendo";
     src: url("../font/FOT-RodinNTLG Pro DB.otf") format('opentype');
@@ -10,11 +17,11 @@
 
 body {
     font-family: Nintendo, sans-serif;
-    background-color: #ffffff;
-    background-image: radial-gradient(circle at 200px 200px, #0eafff 200px, transparent 0), radial-gradient(circle at 200px 200px, #0eafff 200px, transparent 0);
+    background-color: var(--background-color);
+    background-image: radial-gradient(circle at 200px 200px, var(--primary-color) 200px, transparent 0), radial-gradient(circle at 200px 200px, var(--primary-color) 200px, transparent 0);
     background-size: 1100px 1100px;
     background-position: 0px 150px, 500px 700px;
-    color: #0eafff;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +33,7 @@ p {
     margin: 10px 0;
     text-align: center;
     font-weight: 600;
-    color: #0eafff;
+    color: var(--text-color);
 }
 
 p img {
@@ -34,19 +41,18 @@ p img {
 }
 
 a {
-    color: #0eafff;
+    color: var(--text-color);
 }
 
 .content-block {
-    background-color: #ffffff;
-    border: 2px solid #0eafff;
+    background-color: var(--background-color);
+    border: 2px solid var(--primary-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
     margin: 20px;
-    width: 80%;
-    max-width: 600px;
-    color: #0eafff;
+    width: 100%;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,14 +61,14 @@ a {
 
     .content-block hr {
         border: none;
-        border-top: 2px solid #99ddff;
+        border-top: 2px solid var(--secondary-color);
         width: 80%;
         margin: 20px 0;
     }
 
     .content-block h2 {
         margin: 0;
-        color: #0eafff;
+        color: var(--text-color);
         font-family: NintendoU, sans-serif;
     }
 
@@ -88,6 +94,9 @@ a {
         background-size: 1100px 1100px;
         background-position: 0px 150px, 500px 700px;
     }
+    .content-block {
+        max-width: 50vw;
+    }
 }
 
 @media (max-width:800px) {
@@ -103,6 +112,9 @@ a {
         align-items: center;
         gap: 20px;
     }
+    .content-block {
+        width: 90vw;
+    }
 }
 
 footer {
@@ -110,12 +122,13 @@ footer {
     padding: 20px;
     position: relative;
     top: 10px;
-    background-color: #fff;
-    border-top: 2px solid #0eafff;
+    background-color: var(--background-color);
+    border-top: 2px solid var(--primary-color);
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     text-align: center;
-    color: #0eafff;
+    color: var(--text-color);
+    opacity: 0.8;
 }
 
 .mii {
@@ -129,14 +142,84 @@ footer {
 }
 
 .btn {
-    background-image: linear-gradient(180deg, #0eafff, #11a7f2);
+    background-image: linear-gradient(180deg, var(--primary-color), #13a4ed);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #fff;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-family: Nintendo, sans-serif;
     font-weight: bold;
     transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #3d3d3d;
+    background-image: radial-gradient(circle at 200px 200px, #1182ba 200px, transparent 0), radial-gradient(circle at 200px 200px, #1182ba 200px, transparent 0);
+    background-size: 1100px 1100px;
+    background-position: 0px 150px, 500px 700px;
+}
+
+.dark-mode .content-block {
+    background-color: #3d3d3d;
+    border: 2px solid #1182ba;
+    color: #ffffff;
+}
+
+.dark-mode p {
+    color: #ffffff;
+}
+
+.dark-mode .content-block hr {
+    border: none;
+    border-top: 2px solid #1182ba;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.dark-mode .content-block h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: NintendoU, sans-serif;
+}
+
+.dark-mode footer {
+    background-color: #3d3d3d;
+    border-top: 2px solid #1182ba;
+    color: #ffffff;
+}
+
+.dark-mode-toggle {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Nintendo, sans-serif;
+    font-weight: bold;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+}
+
+    .dark-mode-toggle img {
+        width: 30px;
+    }
+
+        .dark-mode-toggle:hover {
+            transform: scale(1.05);
+        }
+
+    .dark-mode-toggle:active {
+        transform: scale(0.95);
+    }
+
+.dark-mode .dark-mode-toggle {
+    background-color: #1182ba;
 }

@@ -11,31 +11,60 @@
     <meta property="og:url" content="https://brewz.one/" />
 </head>
 <body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode();img()"><img src="meta/image/moon.png" id="dark-mode-toggle" alt="Dark Mode" /></button>
     <div class="content-block">
         <header>
             <img src="meta/image/logo.png" alt="BrewZone Logo" class="logo">
         </header>
-        <p>website with nothing in it<br /></p>
+        <p>website with nothing in it<br /><i><a href="https://www.youtube.com/watch?v=XRVP9YTLMc0" target="_blank">brewzone reddit</a></i></p>
         <hr />
         <button class="btn" onclick="window.location.href='https://github.com/BrewZone/BrewZone'">Get Started</button>
     </div>
+    <div class="content-block">
+        <h2>About BrewZone</h2>
+        <hr />
+        <p>idk anything abt brewzone at all whatsoever</p>
+    </div>
     <div class="row">
         <div class="content-block">
-            <h2>About BrewZone</h2>
+            <h2>Credits:</h2>
             <hr />
-            <p>BrewZone is a dedicated space to read the latest news/posts and discuss it with other players in a social setting.</p>
+            <ul>
+                <li><u class="nintendou"><strong>Virtualle</strong></u>: Full-stack developer, kinda bad at spots, gets the job done most of the time. Programs in C, JS, HTML, CSS (barely), LUA, and Python.</li>
+                <li><u class="nintendou"><strong>nebulagamez</strong></u>: Graphics designer, project owner, programs a little bit.</li>
+                <li><u class="nintendou"><strong>Funtum</strong></u>: Excellent programmer, insanely good music composer, programs in C++ and more!</li>
+                <li><u class="nintendou"><strong>Pinecone</strong></u>: Hosts the project, pinecone</li>
+                <li><u class="nintendou"><strong>cannedfart</strong></u>: website guy</li>
+            </ul>
         </div>
         <div class="content-block">
             <h2>How to Install:</h2>
             <hr />
-            <p>BrewZone is currently in development</p>
+            <p>idk how to install brewzone at all either</p>
         </div>
     </div>
     <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> <span class="nintendou">BrewZone</span>. We are NOT affiliated with Nintendo or similar companies.</p>
+        <p>
+            &copy;
+            <script>document.write(new Date().getFullYear())</script> <span class="nintendou">BrewZone</span>. All rights reserved.
+        </p>
         <p>Discord: <a href="https://discord.gg/W4e6tpBwnN" target="_blank">Join our server</a></p>
         <p>Website by @cannedfart <img src="https://mii-unsecure.ariankordi.net/miis/image.png?nnid=someguymaybeig&api_id=1&data=AwEAMFMd7B5ywtx%2FkPCfi8z7ZQ305AAADlFjAGEAbgBuAGUAZABmAGEAcgB0AH9lAgBEASloRBYJNEYSoRAXaA0AgCAAUkhQSgBhAHkAcgBvAG0AZQAAAAAAAAAAAFD8&shaderType=ffliconwithbody&type=face&width=270&pantsColor=gray" alt="cannedfart mii" class="mii" /></p>
-        <p>Assisted by @nebulagamez <img src="https://mii-unsecure.ariankordi.net/miis/image.png?nnid=someguylol&api_id=1&data=AwAAMCP%2BqxLLDi3ynrEz8ED0B%2FlY8QAAoldaAGEAYwBoAAAAAAAAAAAAAAAAAEw5AAAvBwJpRBjAM0UUZhIVZg4AACkAUkhQWgBhAGMAaAAAAAAAAAAAAAAAAAAAAI2%2F&type=face&width=270" alt="nebulagamez mii" class="mii" /></p>
+        <p>Assisted by by @nebulagamez <img src="https://mii-unsecure.ariankordi.net/miis/image.png?nnid=someguylol&api_id=1&data=AwAAMCP%2BqxLLDi3ynrEz8ED0B%2FlY8QAAoldaAGEAYwBoAAAAAAAAAAAAAAAAAEw5AAAvBwJpRBjAM0UUZhIVZg4AACkAUkhQWgBhAGMAaAAAAAAAAAAAAAAAAAAAAI2%2F&type=face&width=270" alt="nebulagamez mii" class="mii" /></p>
     </footer>
+    <script src="meta/js/darkmode.js"></script>
+    <script>
+        window.onload = function () {
+            let savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "dark") {
+                document.body.classList.add("dark-mode");
+                document.getElementById("dark-mode-toggle").src = "meta/image/sun.png";
+            } else if (savedTheme === "light") {
+                document.body.classList.remove("dark-mode");
+                document.getElementById("dark-mode-toggle").src = "meta/image/sun.png";
+            }
+        }
+    </script>
 </body>
 </html>
