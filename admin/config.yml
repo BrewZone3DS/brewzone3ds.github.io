@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: BrewZone3DS/brewzone3ds.github.io
+  branch: main
+
+media_folder: "meta/uploads"
+public_folder: "/meta/uploads"
+
+collections:
+  - name: "news"
+    label: "News"
+    folder: "news"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
