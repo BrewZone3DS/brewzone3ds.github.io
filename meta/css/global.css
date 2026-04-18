@@ -1,25 +1,50 @@
 @font-face {
     font-family: "WiiU";
-    src: url("https://brewzone3ds.github.io/meta/FOT-RodinNTLGProDB.otf") format('opentype');
+    src: url("meta/FOT-RodinNTLG Pro DB.otf") format('opentype');
 }
 
 body {
     font-family: "WiiU", sans-serif;
-    background-color: #474747;
-    background-image: radial-gradient(circle at 10px 10px, #444444 10px, transparent 0), radial-gradient(circle at 10px 10px, #444444 10px, transparent 0);
-    background-size: 20px 20px;
-    background-position: 0px 0px, 20px 20px;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle at 200px 200px, #0eafff 200px, transparent 0), radial-gradient(circle at 200px 200px, #0eafff 200px, transparent 0);
+    background-size: 1100px 1100px;
+    background-position: 0px 150px, 500px 700px;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 500vh;
 }
 
 p {
     margin: 10px 0;
     text-align: center;
+    font-weight: 600;
 }
 
 a {
-    color: #ffffff;
+    color: #0eafff;
 }
+
+.content-block {
+    background-color: #ffffff;
+    border: 2px solid #0eafff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 80%;
+    max-width: 600px;
+    color: #0eafff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+}
+
+    .content-block hr {
+        border: none;
+        border-top: 2px solid #99ddff;
+        width: 80%;
+        margin: 20px 0;
+    }
