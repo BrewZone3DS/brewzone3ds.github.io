@@ -105,15 +105,18 @@ a {
         background-image: radial-gradient(circle at 100px 100px, #0eafff 100px, transparent 0), radial-gradient(circle at 100px 100px, #0eafff 100px, transparent 0);
         background-size: 500px 500px;
         background-position: 0px 150px, 250px 350px;
+        overflow-x: hidden;
     }
     .row {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        overflow-x: hidden;
     }
     .content-block {
         width: 90vw;
+        overflow-x: hidden;
     }
 }
 
@@ -159,12 +162,24 @@ body.dark-mode {
     background-image: radial-gradient(circle at 200px 200px, #1182ba 200px, transparent 0), radial-gradient(circle at 200px 200px, #1182ba 200px, transparent 0);
     background-size: 1100px 1100px;
     background-position: 0px 150px, 500px 700px;
+    overflow-x: hidden;
+}
+
+@media (max-width:800px) {
+    body.dark-mode {
+        background-color: #3d3d3d;
+        background-image: radial-gradient(circle at 100px 100px, #1182ba 100px, transparent 0), radial-gradient(circle at 100px 100px, #1182ba 100px, transparent 0);
+        background-size: 500px 500px;
+        background-position: 0px 150px, 250px 350px;
+        overflow-x: hidden;
+    }
 }
 
 .dark-mode .content-block {
     background-color: #3d3d3d;
     border: 2px solid #1182ba;
     color: #ffffff;
+    overflow: hidden;
 }
 
 .dark-mode p {
